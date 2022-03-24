@@ -2,11 +2,12 @@ import Image from './Image'
 import Link from './Link'
 
 const Card = ({ title, description, imgSrc, href }) => (
-  <div className="md p-4 md:w-1/2" style={{ maxWidth: '544px' }}>
+  <div className="md relative w-full bg-white">
+    <div className="absolute left-3 top-3 -z-10 h-full w-full rounded-md border-2 border-dashed border-purplePrimary"></div>
     <div
       className={`${
         imgSrc && 'h-full'
-      }  overflow-hidden rounded-md border-2 border-gray-200 border-opacity-60 dark:border-gray-700`}
+      }  realtive overflow-hidden rounded-md border-2 border-black dark:border-gray-700`}
     >
       {imgSrc &&
         (href ? (
@@ -42,7 +43,7 @@ const Card = ({ title, description, imgSrc, href }) => (
         {href && (
           <Link
             href={href}
-            className="text-base font-medium leading-6 text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+            className="text-black-500 text-base font-semibold leading-6 hover:text-purplePrimary dark:hover:text-purplePrimary"
             aria-label={`Link to ${title}`}
           >
             Learn more &rarr;
